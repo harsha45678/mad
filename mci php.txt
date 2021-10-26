@@ -1,0 +1,44 @@
+root
+Pswd - D$%^9146ert@#$   
+http://65.1.79.83/phpmyadmin/
+
+SELECT u.name as student_name,u.mobile,e.name as batch,tsq.title as test,tsm.marks FROM `test_series_marks` tsm INNER JOIN users u on u.id=tsm.user_id INNER JOIN test_series_quiz tsq on tsq.id=tsm.quiz_id INNER JOIN exams e on e.id=tsm.course_id WHERE DATE(tsm.created_on)='2021-05-06' and tsm.course_id=37 and tsm.quiz_id=390 order by tsm.marks desc
+
+
+SELECT u.name as student_name,u.mobile,e.name as batch,tsq.title as test,tsm.marks FROM `test_series_marks` tsm
+INNER JOIN users u on u.id=tsm.user_id
+INNER JOIN test_series_quiz tsq on tsq.id=tsm.quiz_id
+INNER JOIN exams e on e.id=tsm.course_id
+WHERE DATE(tsm.created_on)='2021-05-06' and tsm.course_id=37 and tsm.quiz_id=390 order by tsm.marks desc
+
+
+SELECT u.name as student_name,u.mobile,e.name as batch,tsq.title as test,tsm.marks,tsm.created_on FROM `test_series_marks` tsm
+INNER JOIN users u on u.id=tsm.user_id
+INNER JOIN test_series_quiz tsq on tsq.id=tsm.quiz_id
+INNER JOIN exams e on e.id=tsm.course_id
+WHERE DATE(tsm.created_on) BETWEEN '2021-09-05' and '2021-09-17'  and tsm.course_id=27 and tsm.quiz_id=2585 order by tsm.marks desc
+
+
+
+
+DELETE FROM `tbl_student_payment_details` WHERE `tbl_student_payment_details`.`mobile_number` IN (8688280391,.....)
+
+
+
+UPDATE tbl_student_payment_details SET due_date = '2021-08-02' WHERE amount_paid < 60000
+
+
+select jack.*,gipps.student_name,gipps.student_mobile
+
+from tbl_event_attendence as jack
+
+inner join tbl_students as gipps on gipps.id=jack.student_id 
+
+where DATE(jack.created_on)='' AND jack.event_id=''
+
+
+
+
+
+
+UPDATE tbl_student_payment_details SET due_date = '2021-08-02' WHERE amount_paid < 60000

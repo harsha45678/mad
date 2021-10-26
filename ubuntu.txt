@@ -1,0 +1,17 @@
+UBUNTU CMNDS
+
+
+sudo apt update
+sudo apt install apache2
+sudo systemctl status apache2
+
+
+sudo mysql
+mysql -u root -p
+
+
+sudo systemctl restart apache2
+
+
+
+
